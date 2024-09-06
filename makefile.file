@@ -1,0 +1,9 @@
+EXEC=xchess
+LIBS= -lX11 -std=c99
+INCLUDES=xchess.h
+CC=cc -o
+SCRIPTS=xpat1.c xpat2.c
+all: $(EXEC)
+$(SCRIPTS): $(INCLUDES)
+$(EXEC): $(SCRIPTS) $(INCLUDES)
+	$(CC) $(EXEC) $(SCRIPTS) $(LIBS)
